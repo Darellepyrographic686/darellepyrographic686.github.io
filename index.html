@@ -32,7 +32,7 @@
 
   <main id="main">
     <section class="hero wrap" id="top">
-      <p class="prompt"><span class="user">diogo@portugal</span>:<span class="path">~</span>$ whoami</p>
+      <p class="prompt"><span class="user">diogo@portugal</span>:<span class="path">~</span>$ <span class="type">whoami</span><span class="caret" aria-hidden="true"></span></p>
       <h1>Diogo Freire</h1>
       <p class="lead">I build web and mobile apps and I'm studying cybersecurity at <strong>ISTEC</strong> (CTeSP). I like taking a project all the way: from the database and the code to the server it runs on, and then trying to break it.</p>
       <div class="cta">
@@ -47,7 +47,8 @@
     </section>
 
     <section class="wrap" id="projects" aria-labelledby="projects-title">
-      <h2 id="projects-title"><span class="num">01</span> Projects</h2>
+      <p class="prompt" aria-hidden="true"><span class="user">diogo@portugal</span>:<span class="path">~</span>$ ls ~/projects</p>
+      <h2 id="projects-title">Projects</h2>
 
       <article class="feature">
         <div class="gallery">
@@ -111,7 +112,10 @@
     </section>
 
     <section class="wrap" id="skills" aria-labelledby="skills-title">
-      <h2 id="skills-title"><span class="num">02</span> Skills</h2>
+      <p class="prompt" aria-hidden="true"><span class="user">diogo@portugal</span>:<span class="path">~</span>$ cat skills.txt</p>
+      <h2 id="skills-title">Skills</h2>
+      <div class="term">
+      <p class="term-bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span> skills.txt</p>
       <div class="skills">
         <div>
           <h3>Languages</h3>
@@ -130,10 +134,12 @@
           <ul class="chips"><li>OWASP Top 10</li><li>Secure session handling</li><li>Secrets management</li><li>gdb &amp; memory bugs</li><li>OverTheWire</li></ul>
         </div>
       </div>
+      </div>
     </section>
 
     <section class="wrap" id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title"><span class="num">03</span> Contact</h2>
+      <p class="prompt" aria-hidden="true"><span class="user">diogo@portugal</span>:<span class="path">~</span>$ ping diogo</p>
+      <h2 id="contact-title">Contact</h2>
       <div class="contact">
         <p>Open to internships, collaborations and conversations about code or security.</p>
         <div class="links">
@@ -145,6 +151,7 @@
   </main>
 
   <footer class="wrap foot">
+    <p class="prompt" aria-hidden="true"><span class="user">diogo@portugal</span>:<span class="path">~</span>$ exit</p>
     <p>Hand-written HTML and CSS, no trackers. Source on <a href="https://github.com/diogofreire-dev/diogofreire-dev.github.io">GitHub</a>.</p>
   </footer>
 </body>

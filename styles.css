@@ -80,7 +80,7 @@ code { font-family: var(--mono); font-size: .88em; background: var(--code); padd
 .prompt .user { color: var(--green); }
 .prompt .path { color: var(--accent); }
 h1 {
-  font-size: clamp(2.75rem, 8vw, 5rem); line-height: 1; letter-spacing: -.03em; margin: 0 0 1.25rem;
+  font-size: clamp(2.75rem, 8vw, 5rem); line-height: 1.15; letter-spacing: -.03em; margin: 0 0 1rem; padding-bottom: .08em;
   background: linear-gradient(100deg, var(--ink) 30%, var(--accent) 70%, var(--violet));
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
@@ -107,13 +107,28 @@ h3 { margin: 0 0 .5rem; font-size: 1.3rem; }
 .tag { font: .8rem var(--mono); color: var(--muted); margin: 0 0 .5rem; }
 
 .feature {
-  display: grid; grid-template-columns: 1.1fr 1fr; gap: 2rem; align-items: start;
+  display: grid; grid-template-columns: 1fr 1.15fr; gap: 1.5rem 2.5rem; align-items: start;
   background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 1.5rem;
   border-top: 4px solid var(--accent);
 }
 .feature h3 { font-size: 1.75rem; }
-.shot img { border-radius: 12px; border: 1px solid var(--line); }
-.ticks { padding-left: 1.1rem; margin: 1rem 0 1.5rem; }
+.feature-intro > p:not(.tag) { margin: 0 0 1.25rem; }
+
+/* Big shot on the left, two smaller ones stacked on the right; the images crop to fill their cell. */
+.gallery {
+  grid-column: 1 / -1;
+  display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: 1fr 1fr; gap: .75rem;
+}
+.gallery figure { margin: 0; position: relative; overflow: hidden; border-radius: 12px; border: 1px solid var(--line); }
+.gallery .main { grid-row: 1 / 3; }
+.gallery a { display: block; height: 100%; }
+.gallery img { width: 100%; height: 100%; object-fit: cover; object-position: left top; }
+.gallery figcaption {
+  position: absolute; left: .5rem; bottom: .5rem;
+  font: .75rem var(--mono); padding: .2rem .5rem; border-radius: 6px;
+  background: color-mix(in srgb, var(--surface) 88%, transparent); color: var(--ink);
+}
+.ticks { padding-left: 1.1rem; margin: 0; }
 .ticks li { margin-bottom: .5rem; }
 .ticks li::marker { content: "▸ "; color: var(--accent); }
 
@@ -145,7 +160,9 @@ h3 { margin: 0 0 .5rem; font-size: 1.3rem; }
 
 @media (max-width: 760px) {
   .hero { padding: 3.5rem 0 2.5rem; }
-  .feature, .grid, .skills { grid-template-columns: 1fr; }
+  .feature, .grid, .skills, .gallery { grid-template-columns: 1fr; }
+  .gallery { grid-template-rows: auto; }
+  .gallery .main { grid-row: auto; }
   .feature { padding: 1rem; }
   .nav ul { gap: 1rem; font-size: .95rem; }
 }

@@ -50,23 +50,35 @@
       <h2 id="projects-title"><span class="num">01</span> Projects</h2>
 
       <article class="feature">
-        <a class="shot" href="https://finora.spaincentral.cloudapp.azure.com/site/" aria-label="Open the live Finora site">
-          <img src="assets/finora.jpg" width="1200" height="533" alt="Finora home page: the headline 'Sabe para onde vai cada euro' next to a 3D bank card">
-        </a>
-        <div class="feature-body">
+        <div class="gallery">
+          <figure class="main">
+            <a href="assets/finora.jpg"><img src="assets/finora.jpg" width="1200" height="500" alt="Finora home page: the headline 'Sabe para onde vai cada euro' next to a 3D bank card"></a>
+          </figure>
+          <figure>
+            <a href="assets/finora-features.jpg"><img src="assets/finora-features.jpg" width="1000" height="396" alt="Finora feature list: cards, transactions, invoice reader, budgets, savings, reminders, analysis, investments and assistant" loading="lazy"></a>
+            <figcaption>Everything in one place</figcaption>
+          </figure>
+          <figure>
+            <a href="assets/finora-security.jpg"><img src="assets/finora-security.jpg" width="1000" height="375" alt="Finora security section: hashed passwords, brute-force lockout, email confirmation and per-user access checks" loading="lazy"></a>
+            <figcaption>Security, explained to users</figcaption>
+          </figure>
+        </div>
+        <div class="feature-intro">
           <p class="tag">Featured · PHP · MariaDB · JavaScript</p>
           <h3>Finora</h3>
           <p>A personal finance web app: cards, spending, budgets, payment reminders, savings goals and a tracker for investments. It started as my final school project (PAP) with a classmate, and I kept working on it as a portfolio and security project.</p>
+          <div class="links">
+            <a class="btn primary" href="https://finora.spaincentral.cloudapp.azure.com/site/">Live site</a>
+            <a class="btn" href="https://github.com/diogofreire-dev/Finora">Source code</a>
+          </div>
+        </div>
+        <div class="feature-body">
           <ul class="ticks">
             <li>Audited against the <strong>OWASP Top 10</strong>: prepared statements only, CSRF tokens on every POST, per-user checks against IDOR, rate limiting on login and password reset.</li>
             <li>Reads the QR code on Portuguese invoices with the camera and fills in the amount, date and company (looked up by VAT number through VIES).</li>
             <li>An assistant that answers questions about your spending, with the model called only from the server and user data kept apart from the instructions.</li>
             <li>Deployed by me on an Ubuntu VM in Azure, with Apache, HTTPS and CI on GitHub Actions.</li>
           </ul>
-          <div class="links">
-            <a class="btn primary" href="https://finora.spaincentral.cloudapp.azure.com/site/">Live site</a>
-            <a class="btn" href="https://github.com/diogofreire-dev/Finora">Source code</a>
-          </div>
         </div>
       </article>
 
